@@ -15,7 +15,7 @@ import org.springframework.cache.annotation.EnableCaching;
 public class Application {
 
     public static void main(String[] args) throws Throwable {
-        SpringApplication.run(Application.class, args)
+        SpringApplication.run(Application.class, args);
     }
 
 }
