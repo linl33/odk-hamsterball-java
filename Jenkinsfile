@@ -3,6 +3,10 @@ pipeline {
         label 'docker'
     }
 
+    options {
+        timestamps()
+    }
+
     stages {
         stage('Build') {
             steps {
