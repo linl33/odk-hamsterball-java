@@ -3,26 +3,15 @@ pipeline {
         label 'docker'
     }
 
-//    tools {
-//        ant 'Ant 1.10.1'
-//        maven 'Maven 3.5.0'
-//        jdk 'JDK 1.8'
-//    }
-
     stages {
         stage('Build') {
             steps {
 //                script {
 //                    docker.build('odk/sync-web-ui', '--no-cache --pull .')
 //                }
+                // TODO: use docker plugin after they fix named stage bug
                 sh 'docker build -t odk/sync-web-ui --no-cache --pull .'
             }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
         }
     }
 }
