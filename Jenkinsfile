@@ -12,9 +12,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    docker.build('odk/sync-web-ui', '--no-cache --pull .')
-                }
+//                script {
+//                    docker.build('odk/sync-web-ui', '--no-cache --pull .')
+//                }
+                sh 'docker build -t odk/sync-web-ui --no-cache --pull .'
             }
         }
     }
