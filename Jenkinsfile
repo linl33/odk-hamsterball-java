@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'uitest'
+        label 'docker'
     }
 
     tools {
@@ -10,10 +10,16 @@ pipeline {
     }
 
     stages {
-        stage('test') {
+        stage('Install Ant Dependencies') {
             steps {
                 sh 'echo test 2'
             }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
         }
     }
 }
