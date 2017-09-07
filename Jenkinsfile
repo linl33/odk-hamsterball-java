@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build image: 'odk/sync-web-ui', args: '--pull'
+                    docker.build('odk/sync-web-ui', '--pull')
                 }
             }
         }
