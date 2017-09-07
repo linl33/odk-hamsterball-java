@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'uitest'
+    }
 
     tools {
         ant 'Ant 1.10.1'
