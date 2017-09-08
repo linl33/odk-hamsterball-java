@@ -23,7 +23,7 @@ pipeline {
     post {
         success {
             script {
-                docker.image("odk/sync_endpoint:${env.BUILD_NUMBER}").tag('latest')
+                docker.image("odk/sync-web-ui:${env.BUILD_NUMBER}").tag('latest')
             }
         }
     }
