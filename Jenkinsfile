@@ -6,14 +6,14 @@ pipeline {
     }
 
     options {
-        skipDefaultCheckout()
+        skipStagesAfterUnstable()
     }
 
     stages {
         stage('Build') {
-//            when {
-//                invalid 'invalid'
-//            }
+            when {
+                invalid 'invalid'
+            }
 
             steps {
 //                script {
