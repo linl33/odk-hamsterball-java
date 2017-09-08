@@ -9,10 +9,6 @@ pipeline {
 
     stages {
         stage('Build') {
-            when {
-                invalid 'invalid'
-            }
-
             steps {
 //                script {
 //                    docker.build('odk/sync-web-ui', '--no-cache --pull .')
